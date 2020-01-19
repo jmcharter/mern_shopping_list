@@ -6,7 +6,8 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink
+    NavLink,
+    Container
 } from 'reactstrap';
 
 class AppNavbar extends Component {
@@ -23,16 +24,18 @@ class AppNavbar extends Component {
     render() {
         return (
             <div>
-                <Navbar color="dark" dark expand="sm">
-                    <NavbarBrand href="/">Shopping List</NavbarBrand>
-                    <NavbarToggler onClick={this.toggle} />
-                    <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className="ml-auto" navbar>
-                            <NavItem>
-                                <NavLink href="https://github.com/jmcharter">GitHub</NavLink>
-                            </NavItem>
-                        </Nav>
-                    </Collapse>
+                <Navbar color="dark" dark expand="sm" className="mb-5">
+                    <Container>
+                        <NavbarBrand href="/">Shopping List</NavbarBrand>
+                        <NavbarToggler onClick={this.toggle} />
+                        <Collapse isOpen={this.state.isOpen} navbar>
+                            <Nav className="ml-auto" navbar>
+                                <NavItem>
+                                    <NavLink href="https://github.com/jmcharter">GitHub</NavLink>
+                                </NavItem>
+                            </Nav>
+                        </Collapse>
+                    </Container>
                 </Navbar>
             </div>
         );
